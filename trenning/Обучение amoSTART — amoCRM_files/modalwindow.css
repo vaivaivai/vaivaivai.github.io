@@ -1,0 +1,257 @@
+/* modal window */
+h3{
+    word-spacing: 0;
+}
+
+.red_text {
+    color: #FF0000;
+}
+
+.white_text {
+    color: #fff;
+}
+
+.white_text h3{
+    color: #fff;
+}
+
+.window {
+    top: -250px;
+    position: fixed;
+    background-color: #339dc8;
+    border: 1px solid #198cca;
+    display: none;
+    z-index:9999;
+    line-height: 26px;
+    font-size: 16px;
+    color: #fff;
+    width: 500px;
+    height: auto;
+    max-width: 500px;
+    padding: 38px 40px;
+    overflow: auto;
+}
+
+.window h2{
+    text-align: center;
+    line-height: 1.5;
+}
+
+h3 {
+    text-transform: none;
+    font-weight: 300;
+}
+
+
+
+.send {
+    float: right;
+}
+
+.message {
+    resize: none;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    outline: none;
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: 14px;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    color: #2e2e2e;
+    min-height: 120px;
+    max-width: 420px;
+}
+
+.overlay {
+    z-index: 1003;
+    position:fixed;
+    background-color: #ffffff;
+    opacity:0.5;
+    -moz-opacity:0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*cursor: pointer;*/
+    display: none;
+}
+
+#dialog{
+    padding-bottom: 20px;
+}
+
+.send {
+    padding: 17px 25px;
+    font-size: 15px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #efb312;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+}
+
+.window_button:hover, .window input[type=file]:hover {
+    background: #f2a106;
+}
+
+.window input[type=file] {
+    cursor: pointer;
+}
+
+.file_upload__text {
+    padding: 10px 15px;
+}
+
+.close {
+    float: right;
+    background: transparent;
+    border: none;
+}
+
+.close:hover {
+    background: transparent;
+}
+
+.cross {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    right: -25px;
+    top: -35px;
+    cursor: pointer;
+}
+
+.cross:before, .cross:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #CEEDF9;
+}
+
+.cross:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cross:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #339dc8;
+    opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #339dc8;
+    opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #339dc8;
+    opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #339dc8;
+    opacity: 0.5;
+}
+
+.window .text_input {
+    height: 49px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 100%;
+    padding-left: 15px;
+    color: #2e2e2e;
+}
+
+.window .row {
+    margin-bottom: 15px;
+}
+
+.window_button {
+    margin: 15px 0 0;
+}
+
+.accept_modal h2{
+    display: none;
+}
+
+@media (max-width: 509px){
+    .window{
+        width: auto;
+    }
+}
+
+@media (max-width: 439px){
+    .window {
+        padding: 20px;
+        width: calc(100% - 10px);
+    }
+
+    .cross {
+        right: -20px;
+        top: -30px;
+    }
+
+}
+
+@media (max-width: 399px){
+    .window h3 {
+        font-size: 16px;
+    }
+    .window p {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 414px) and (orientation:landscape) {
+    .window {
+        padding: 2vw 40px;
+    }
+
+    .cross{
+        top: -20px;
+        height: 33px;
+    }
+
+    .window_button{
+        margin: 15px 0 0;
+    }
+
+    .message {
+        min-height: 80px;
+    }
+
+    .window h3, .window.row{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-height: 413px){
+    .js-file-upload + p {
+        display: none;
+    }
+}

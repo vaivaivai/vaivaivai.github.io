@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.amo-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 50px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    will-change: transform, opacity;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+.amo-button--telegram {
+    background: transparent url("/img/telegram.svg") 50% no-repeat;
+    background-size: cover;
+}
+.amo-button--messenger {
+    background: transparent url("/img/messenger.png") 50% no-repeat;
+    background-size: cover;
+}
+.amo-button--viber {
+    background: transparent url("/img/viber.png") 50% no-repeat;
+    background-size: cover;
+}
+.amo-button--facebook {
+    background: transparent url("/img/facebook.png") 50% no-repeat;
+    background-size: cover;
+}
+.amo-button--vk {
+    background: transparent url("/img/vk.png") 50% no-repeat;
+    background-size: cover;
+}
+.amo-button--form{
+    background: #006f9f url("/img/form.png") 50% no-repeat;
+    background-size: 50%;
+}
+.amo-button__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.amo-inner-buttons {
+    position: relative;
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+    z-index: 1;
+    padding-bottom: 0;
+}
+.amo-inner-buttons-body {
+    padding: 7px 0;
+    position: relative;
+}
+.amo-inner-buttons-body.horisontal {
+    padding: 0 7px;
+    height: 64px;
+    position: relative;
+}
+.amo-inner-buttons-body.vertical {
+    padding: 0 7px;
+    height: 244px;
+    position: relative;
+}
+.amo-inner-buttons .amo-button {
+    margin: 0 auto 10px;
+}
+.buttonscollapsed .amo-inner-buttons .amo-button {
+    visibility: hidden;
+}
+/*1*/
+  
+        .amo-inner-buttons .amo-button:nth-of-type(1) {
+      -webkit-transition-duration: 300ms;
+      transition-duration: 300ms;
+      }
+      .buttonscollapsed .amo-inner-buttons .amo-button:nth-of-type(1){
+        -webkit-transform: translate(180px, 0);
+        transform: translate(180px, 0);
+      }
+        .amo-inner-buttons .amo-button:nth-of-type(2) {
+      -webkit-transition-duration: 200ms;
+      transition-duration: 200ms;
+      }
+      .buttonscollapsed .amo-inner-buttons .amo-button:nth-of-type(2){
+        -webkit-transform: translate(120px, 0);
+        transform: translate(120px, 0);
+      }
+        .amo-inner-buttons .amo-button:nth-of-type(3) {
+      -webkit-transition-duration: 100ms;
+      transition-duration: 100ms;
+      }
+      .buttonscollapsed .amo-inner-buttons .amo-button:nth-of-type(3){
+        -webkit-transform: translate(60px, 0);
+        transform: translate(60px, 0);
+      }
+  
+.amo-inner-buttons.horisontal {
+    width: 230px;
+    height: 50px;
+    position: absolute;
+    bottom: 7px;
+}
+.amo-inner-buttons.vertical {
+    width: 50px;
+    height: 230px;
+    position: absolute;
+    bottom: 7px;
+    }
+.overlay{
+    position: absolute;
+    top: -7px;
+    bottom: -7px;
+    left: -7px;
+    right: -7px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    border-radius: 50px;
+}
+.amo-inner-buttons.horisontal .overlay {
+
+}
+.amo-inner-buttons.vertical .overlay {
+}
+.amo-inner-buttons.horisontal .amo-button {
+    float:  left ;
+    margin: 0 10px 0 0;
+}
+
+.buttonscollapsed .amo-inner-buttons.horisontal .overlay {
+    opacity: 0;
+    visibility: hidden;
+            left: 173px;
+    }
+.buttonscollapsed .amo-inner-buttons.vertical .overlay {
+    opacity: 0;
+    visibility: hidden;
+    top: 173px;
+}
+
+.buttonscollapsed .amo-button {
+    opacity: 0;
+}
